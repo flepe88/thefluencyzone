@@ -700,13 +700,14 @@
                         onmousemove="moveTooltip(event)"
                         onmouseleave="hideTooltip()"
                         class="w-full flex items-center justify-between p-3.5 border border-fluency-neon/20 rounded-xl bg-[#0d1015]/80 hover:bg-fluency-neon/10 hover:border-fluency-neon/60 transition duration-150 text-left">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xl">✨</span>
-                        <div>
-                            <span class="font-bold text-gray-100 text-base leading-tight">${app.title}</span>
+                    <div class="flex items-center gap-3 overflow-hidden">
+                        <span class="text-xl flex-shrink-0">✨</span>
+                        <div class="overflow-hidden">
+                            <span class="font-bold text-gray-100 text-base leading-tight block truncate">${app.title}</span>
+                            <span class="text-[11px] text-gray-400 font-normal mt-1 leading-snug line-clamp-2 hidden [@media(pointer:coarse)]:block pr-2">${app.instruction}</span>
                         </div>
                     </div>
-                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <svg class="w-4 h-4 text-gray-500 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
                 `;
             });
