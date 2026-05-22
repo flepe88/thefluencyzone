@@ -511,18 +511,51 @@
                     },
                     { 
                         id: 2, 
-                        title: "Story 2: Unexpected Meetings", 
-                        duration: "5:32",
-                        youtubeId: "L88_NAtG64A",
-                        thumbnail: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=400&q=80",
-                        description: "An unplanned meeting presents opportunities to engage in deep dialogue and swap background histories.",
-                        apps: generateApps(),
-                        homeworkPrompt: "Formulate a fictional dialogue exchange (minimum 8 back-and-forth sentences) describing how you unexpectedly bumped into an old business partner at an airport lounge.",
+                        title: "The Oak Tree", 
+                        duration: "2:39",
+                        youtubeId: "_6mlmRJHxNo",
+                        thumbnail: "https://img.youtube.com/vi/_6mlmRJHxNo/hqdefault.jpg",
+                        description: "Two hikers get stuck in some bad weather, and discover that sometimes the best things in life aren't what we might have originally wished for. A short story with simple language, told in the present tense.",
+                        apps: (() => {
+                            // Request exactly 7 apps to prevent random slicing
+                            const apps = generateApps(7);
+                            
+                            // Assign the specified link to App 1
+                            apps[0].url = "https://thedogandhisbone.netlify.app/";
+                            apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 2
+                            apps[1].url = "https://thedogquest.netlify.app/";
+                            apps[1].instruction = "Answer the following questions.";
+                            
+                            // Assign the specified link to App 3
+                            apps[2].url = "https://thedogopen.netlify.app/";
+                            apps[2].instruction = "Try to define the words hidden behind the boxes.";
+                            
+                            // Assign the specified link to App 4
+                            apps[3].url = "https://thedogandhisbone2.netlify.app/";
+                            apps[3].instruction = "Listen to part 2 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 5
+                            apps[4].url = "https://thedogquizz.netlify.app/";
+                            apps[4].instruction = "Choose the best option according to the story";
+                            
+                            // Assign the specified link to App 6
+                            apps[5].url = "https://thedogmatch.netlify.app/";
+                            apps[5].instruction = "Create pairs of related images based on the story.";
+                            
+                            // Assign the specified link to App 7
+                            apps[6].url = "https://thedogandhisbone3.netlify.app/";
+                            apps[6].instruction = "Listen to the last part of the story and put the sentences in the correct order.";
+                            
+                            return apps;
+                        })(),
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long.\n\n1.Walk down.\n\n2.Lucky.\n\n3.Through.\n\n4.Bigger than.\n\n5.Wonder.\n\n6.Greedy.",
                         transcript: "UNEXPECTED MEETINGS\n\n[Airport Lounge Ambiance]\n\nSarah: Oh my goodness, David? Is that really you?\n\nDavid: Sarah! Wow! What an incredible surprise! What are you doing here?\n\nSarah: I am waiting for my connection flight to Madrid. I have a conference there tomorrow morning.\n\nDavid: That is amazing. I am actually heading back from a business seminar in Chicago. It has been at least five years since we last crossed paths.\n\nSarah: Yes, indeed! Let's sit down and grab a cup of coffee. I want to hear all about your new ventures.\n\nDavid: Absolutely, let's do that. There is so much to catch up on!"
                     },
                     { 
                         id: 3, 
-                        title: "Story 3: Navigation Quest", 
+                        title: "The Fox and the Crow", 
                         duration: "6:03",
                         youtubeId: "XQxP9F3b_Q8",
                         thumbnail: "https://images.unsplash.com/photo-1527269537047-40fbe5034115?auto=format&fit=crop&w=400&q=80",
