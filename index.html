@@ -186,7 +186,10 @@
                     <div>
                         <h4 class="text-sm font-semibold uppercase tracking-wider text-fluency-neon font-display">Linguistic Apps</h4>
                     </div>
-                    <!-- The Close Workspace action is now controlled exclusively via the mobile gesture / device back button -->
+                    <!-- Desktop-only Close Button (hidden on mobile, visible on medium screens and up) -->
+                    <button onclick="closeLearningModal()" class="hidden md:block text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 p-2 rounded-lg transition animate-fade-in">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
                 </div>
                 <div id="modal-apps-container" class="space-y-3 flex-grow">
                     <!-- Exercise buttons will be injected dynamically -->
