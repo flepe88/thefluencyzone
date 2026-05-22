@@ -875,7 +875,12 @@
         // Custom action function to launch speaking app
         window.launchSpeakingApp = () => {
             closeSpeakingPanel();
-            alertExercise("Speaking Section Practice Engine");
+            // Check if we are in Unit 1 (index 0), Story 1 (index 0 - "The Dog and his Bone")
+            if (activeUnitIndex === 0 && activeStoryIndex === 0) {
+                launchApp("Speaking Section Practice Engine", "https://speaking1.netlify.app/");
+            } else {
+                alertExercise("Speaking Section Practice Engine");
+            }
         };
 
         // Dedicated helper to trigger animation toast and optionally navigate to URL
