@@ -472,6 +472,12 @@
                                 // Set customized instruction for the tooltip
                                 apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
                             }
+                            if (apps.length > 1) {
+                                // Assign the specified link to App 2
+                                apps[1].url = "https://thedogquest.netlify.app/";
+                                // Set customized instruction for the tooltip
+                                apps[1].instruction = "Answer the following questions.";
+                            }
                             return apps;
                         })(),
                         homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long.\n\n1.Walk down.\n\n2.Lucky.\n\n3.Through.\n\n4.Bigger than.\n\n5.Wonder.\n\n6.Greedy.",
