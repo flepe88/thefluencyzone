@@ -478,6 +478,12 @@
                                 // Set customized instruction for the tooltip
                                 apps[1].instruction = "Answer the following questions.";
                             }
+                            if (apps.length > 2) {
+                                // Assign the specified link to App 3
+                                apps[1].url = "https://thedogopen.netlify.app/";
+                                // Set customized instruction for the tooltip
+                                apps[1].instruction = "Try to define the words hidden behind the boxes.";
+                            }
                             return apps;
                         })(),
                         homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long.\n\n1.Walk down.\n\n2.Lucky.\n\n3.Through.\n\n4.Bigger than.\n\n5.Wonder.\n\n6.Greedy.",
