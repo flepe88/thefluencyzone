@@ -435,9 +435,9 @@
             "Refine your articulation structures and track speech pace synchrony."
         ];
 
-        // Generate exactly 7 to 9 simple, numbered apps per story with native instructions
-        const generateApps = () => {
-            const numApps = Math.floor(Math.random() * 3) + 7; // 7, 8, or 9
+        // Generate simple, numbered apps per story with native instructions. Supports custom fixed counts.
+        const generateApps = (fixedCount = null) => {
+            const numApps = fixedCount !== null ? fixedCount : (Math.floor(Math.random() * 3) + 7); // Default to 7, 8, or 9
             const apps = [];
             
             for (let i = 0; i < numApps; i++) {
@@ -465,61 +465,45 @@
                         thumbnail: "https://img.youtube.com/vi/Oq-vK6nyPDY/hqdefault.jpg",
                         description: "A dog finds a bone and feels like the luckiest dog in the world until he sees another dog... A short story in the present tense.",
                         apps: (() => {
-                            const apps = generateApps();
-                            if (apps.length > 0) {
-                                // Assign the specified link to App 1
-                                apps[0].url = "https://thedogandhisbone.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
-                            }
-                            if (apps.length > 1) {
-                                // Assign the specified link to App 2
-                                apps[1].url = "https://thedogquest.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[1].instruction = "Answer the following questions.";
-                            }
-                            if (apps.length > 2) {
-                                // Assign the specified link to App 3
-                                apps[2].url = "https://thedogopen.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[2].instruction = "Try to define the words hidden behind the boxes.";
-                            }
-                            if (apps.length > 3) {
-                                // Assign the specified link to App 4
-                                apps[3].url = "https://thedogandhisbone2.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[3].instruction = "Listen to part 2 of the story and put the sentences in the correct order.";
-                            }
-                            if (apps.length > 4) {
-                                // Assign the specified link to App 5
-                                apps[4].url = "https://thedogquizz.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[4].instruction = "Choose the best option according to the story";
-                            }
-                            if (apps.length > 5) {
-                                // Assign the specified link to App 6
-                                apps[5].url = "https://thedogmatch.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[5].instruction = "Create pairs of related images based on the story.";
-                            }
-                            if (apps.length > 6) {
-                                // Assign the specified link to App 7
-                                apps[6].url = "https://thedogandhisbone3.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[6].instruction = "Listen to the last part of the story and put the sentences in the correct order.";
-                            }
-                            if (apps.length > 7) {
-                                // Assign the specified link to App 8
-                                apps[7].url = "https://thedogmemorygame.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[7].instruction = "Let’s find the pairs of verbs contained in the story. Each time you find a pair, answer the question or request from the pop-up window.";
-                            }
-                            if (apps.length > 8) {
-                                // Assign the specified link to App 9
-                                apps[8].url = "https://thedogmemorygame2.netlify.app/";
-                                // Set customized instruction for the tooltip
-                                apps[8].instruction = "Let’s find the pairs of verbs contained in the story. Each time you find a pair, answer the question or request from the pop-up window.";
-                            }
+                            // Request exactly 9 apps to prevent random slicing
+                            const apps = generateApps(9);
+                            
+                            // Assign the specified link to App 1
+                            apps[0].url = "https://thedogandhisbone.netlify.app/";
+                            apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 2
+                            apps[1].url = "https://thedogquest.netlify.app/";
+                            apps[1].instruction = "Answer the following questions.";
+                            
+                            // Assign the specified link to App 3
+                            apps[2].url = "https://thedogopen.netlify.app/";
+                            apps[2].instruction = "Try to define the words hidden behind the boxes.";
+                            
+                            // Assign the specified link to App 4
+                            apps[3].url = "https://thedogandhisbone2.netlify.app/";
+                            apps[3].instruction = "Listen to part 2 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 5
+                            apps[4].url = "https://thedogquizz.netlify.app/";
+                            apps[4].instruction = "Choose the best option according to the story";
+                            
+                            // Assign the specified link to App 6
+                            apps[5].url = "https://thedogmatch.netlify.app/";
+                            apps[5].instruction = "Create pairs of related images based on the story.";
+                            
+                            // Assign the specified link to App 7
+                            apps[6].url = "https://thedogandhisbone3.netlify.app/";
+                            apps[6].instruction = "Listen to the last part of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 8
+                            apps[7].url = "https://thedogmemorygame.netlify.app/";
+                            apps[7].instruction = "Let’s find the pairs of verbs contained in the story. Each time you find a pair, answer the question or request from the pop-up window.";
+                            
+                            // Assign the specified link to App 9
+                            apps[8].url = "https://thedogmemorygame2.netlify.app/";
+                            apps[8].instruction = "Let’s find the pairs of verbs contained in the story. Each time you find a pair, answer the question or request from the pop-up window.";
+                            
                             return apps;
                         })(),
                         homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long.\n\n1.Walk down.\n\n2.Lucky.\n\n3.Through.\n\n4.Bigger than.\n\n5.Wonder.\n\n6.Greedy.",
