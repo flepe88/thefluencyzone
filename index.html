@@ -22,13 +22,14 @@
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
                         display: ['Outfit', 'system-ui', 'sans-serif'],
+                        comfortaa: ['Comfortaa', 'system-ui', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap');
         
         body {
             background-color: theme('colors.fluency.bg');
@@ -148,8 +149,19 @@
                     </div>
                     <div class="p-6">
                         <h3 id="modal-story-title" class="text-2xl font-display font-bold text-white mb-2">Story Title</h3>
-                        <p id="modal-story-desc" class="text-gray-400 text-sm mb-6">Video story description and immersion instructions.</p>
+                        <p id="modal-story-desc" class="text-gray-400 text-sm mb-4">Video story description and immersion instructions.</p>
                         
+                        <!-- Collapsible Transcript Block -->
+                        <div class="mb-6">
+                            <button onclick="toggleTranscript()" class="inline-flex items-center gap-2 px-3.5 py-2 bg-gray-800 hover:bg-gray-700 hover:text-fluency-neonLight border border-gray-700/60 rounded-xl text-xs font-semibold text-fluency-neon transition">
+                                <span id="transcript-toggle-icon">📖</span>
+                                <span id="transcript-toggle-text">Show Transcript</span>
+                            </button>
+                            <div id="transcript-window" class="hidden mt-3 p-4 bg-gray-950/80 border border-gray-800 rounded-xl max-h-48 overflow-y-auto">
+                                <p id="transcript-text" class="text-xs text-gray-300 font-comfortaa whitespace-pre-wrap leading-relaxed"></p>
+                            </div>
+                        </div>
+
                         <!-- Core Workspace Interactive Modules -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-800">
                             <!-- Homework Button -->
@@ -452,7 +464,8 @@
                         thumbnail: "https://img.youtube.com/vi/Oq-vK6nyPDY/hqdefault.jpg",
                         description: "A dog finds a bone and feels like the luckiest dog in the world until he sees another dog... A short story in the present tense.",
                         apps: generateApps(),
-                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long. 1.Walk down. 2.Lucky. 3.Through. 4.Bigger than. 5.Wonder. 6.Greedy."
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long. 1.Walk down. 2.Lucky. 3.Through. 4.Bigger than. 5.Wonder. 6.Greedy.",
+                        transcript: "THE DOG AND HIS BONE\n\nOnce upon a time, there was a dog named Max. Max was walking down the street. He was feeling very happy because he had a big, juicy bone in his mouth.\n\n\"I am the luckiest dog in the world!\" Max thought to himself.\n\nOn his way home, Max had to cross a small wooden bridge over a clear, flowing stream. As he walked across, he looked down into the water.\n\nTo his surprise, Max saw another dog looking back at him from the water. And that dog had a bone that looked even bigger and juicier than his own!\n\nMax did not realize he was looking at his own reflection.\n\n\"I want that bone too!\" greedy Max thought.\n\nHe opened his mouth wide to bark at the other dog to scare him and take his bone. But the moment he opened his mouth, his own bone fell out, splashed into the stream, and sank to the bottom.\n\nMax was left with nothing. He walked home feeling very silly and hungry, wishing he hadn't been so greedy."
                     },
                     { 
                         id: 2, 
@@ -462,7 +475,8 @@
                         thumbnail: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=400&q=80",
                         description: "An unplanned meeting presents opportunities to engage in deep dialogue and swap background histories.",
                         apps: generateApps(),
-                        homeworkPrompt: "Formulate a fictional dialogue exchange (minimum 8 back-and-forth sentences) describing how you unexpectedly bumped into an old business partner at an airport lounge."
+                        homeworkPrompt: "Formulate a fictional dialogue exchange (minimum 8 back-and-forth sentences) describing how you unexpectedly bumped into an old business partner at an airport lounge.",
+                        transcript: "UNEXPECTED MEETINGS\n\n[Airport Lounge Ambiance]\n\nSarah: Oh my goodness, David? Is that really you?\n\nDavid: Sarah! Wow! What an incredible surprise! What are you doing here?\n\nSarah: I am waiting for my connection flight to Madrid. I have a conference there tomorrow morning.\n\nDavid: That is amazing. I am actually heading back from a business seminar in Chicago. It has been at least five years since we last crossed paths.\n\nSarah: Yes, indeed! Let's sit down and grab a cup of coffee. I want to hear all about your new ventures.\n\nDavid: Absolutely, let's do that. There is so much to catch up on!"
                     },
                     { 
                         id: 3, 
@@ -472,7 +486,8 @@
                         thumbnail: "https://images.unsplash.com/photo-1527269537047-40fbe5034115?auto=format&fit=crop&w=400&q=80",
                         description: "Lost in the downtown districts. Learn to process map coordinates, street instructions, and local shortcuts.",
                         apps: generateApps(),
-                        homeworkPrompt: "Draft an instructional guide outlining step-by-step directions from your home to your favorite local café. Integrate complex directional adverbs (e.g., adjacent to, bypass, opposite)."
+                        homeworkPrompt: "Draft an instructional guide outlining step-by-step directions from your home to your favorite local café. Integrate complex directional adverbs (e.g., adjacent to, bypass, opposite).",
+                        transcript: "NAVIGATION QUEST\n\n[City Downtown Noises]\n\nLost Tourist: Excuse me, sir. Could you point me in the direction of the Central Art Museum?\n\nLocal Resident: Ah, yes. It can be a bit tricky from here. Walk straight down this avenue until you reach the old stone library.\n\nLost Tourist: Is that near the central cathedral?\n\nLocal Resident: Correct. Once you bypass the cathedral square, make a sharp left turn. The museum will be directly adjacent to the botanical greenhouse, right opposite the train station.\n\nLost Tourist: Thank you so much! I was completely turned around on my map."
                     },
                     { 
                         id: 4, 
@@ -482,7 +497,8 @@
                         thumbnail: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=400&q=80",
                         description: "Hone conversational bartering skills, currency exchanges, and transactions in a lively central market.",
                         apps: generateApps(),
-                        homeworkPrompt: "Write a persuasive commercial pitch for an item of your choice, incorporating bartering tactics and price reduction strategies discussed in Story 4."
+                        homeworkPrompt: "Write a persuasive commercial pitch for an item of your choice, incorporating bartering tactics and price reduction strategies discussed in Story 4.",
+                        transcript: "THE TRADE EXCHANGE\n\n[Lively Outdoor Market Noise]\n\nBuyer: Hello. This brass lantern is absolutely beautiful. How much are you asking for it?\n\nSeller: Ah, you have excellent taste! That is a genuine antique. I can let it go for eighty dollars.\n\nBuyer: Eighty dollars? That is a bit steep for my budget. Would you consider fifty?\n\nSeller: Fifty is too low, my friend. I paid more than that to acquire it. However, since you appreciate quality, I can do seventy.\n\nBuyer: Let's meet in the middle. Sixty-five, and I will pay in cash right now.\n\nSeller: Sixty-five... active deal! You've got yourself a beautiful treasure."
                     }
                 ]
             },
@@ -499,7 +515,8 @@
                         thumbnail: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=400&q=80",
                         description: "A conversation while dining with locals. Master social ordering etiquettes and casual pleasantries.",
                         apps: generateApps(),
-                        homeworkPrompt: "Compose a restaurant review detailing a culinary experience, highlighting conversational exchanges with the hosting staff and the presentation of dishes."
+                        homeworkPrompt: "Compose a restaurant review detailing a culinary experience, highlighting conversational exchanges with the hosting staff and the presentation of dishes.",
+                        transcript: "THE BISTRO DIALOGUE\n\n[Clinking Glasses and Light Jazz Piano]\n\nServer: Good evening. Welcome to Le Petit Bistro. Are you ready to order, or do you need a few more minutes?\n\nGuest A: Good evening. We are ready. I would like to try the chef's special grilled salmon with seasonal vegetables.\n\nGuest B: And for me, the classic herb roasted chicken, please. Also, what do you recommend for dessert?\n\nServer: Our homemade lemon tart is spectacular tonight.\n\nGuest A: Perfect, we will order two of those later. Thank you!"
                     },
                     { 
                         id: 2, 
@@ -509,7 +526,8 @@
                         thumbnail: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80",
                         description: "Align schedules and express future projections during a brainstorming meeting with peers.",
                         apps: generateApps(),
-                        homeworkPrompt: "Develop a written blueprint for a week-long business project launch, clearly listing agenda goals, deadlines, and team dependencies using futuristic terminology."
+                        homeworkPrompt: "Develop a written blueprint for a week-long business project launch, clearly listing agenda goals, deadlines, and team dependencies using futuristic terminology.",
+                        transcript: "AGENDA DRAFTING\n\n[Office Conference Room Setting]\n\nProject Lead: Welcome everyone. Let's outline our rollout agenda for next month's launch.\n\nDeveloper: The software codebase is currently stable. We need to complete security testing by Friday afternoon.\n\nDesigner: The interactive interface prototypes are finished. I will sync with marketing to align on assets.\n\nProject Lead: Excellent. Let's schedule the final deployment review for next Tuesday. We want to ensure everything runs perfectly before public deployment."
                     },
                     { 
                         id: 3, 
@@ -519,7 +537,8 @@
                         thumbnail: "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=400&q=80",
                         description: "Explore relationship terms, shared histories, and domestic expressions around a large family table.",
                         apps: generateApps(),
-                        homeworkPrompt: "Describe a memorable celebration or holiday event in your family. Include descriptions of family relations, traditional expressions, and dining settings."
+                        homeworkPrompt: "Describe a memorable celebration or holiday event in your family. Include descriptions of family relations, traditional expressions, and dining settings.",
+                        transcript: "FAMILY GATHERINGS\n\n[Warm Family Dinner Ambient Sound]\n\nGrandmother: Pass the potatoes down, please. It is so wonderful to have everyone seated together under one roof.\n\nUncle: It truly is. It's been nearly two years since we all gathered like this.\n\nCousin: I was just telling Aunt Clara how much I missed her traditional apple pie recipe.\n\nGrandmother: Well, you are in luck! Clara baked two of them this morning. Let's enjoy our main course first!"
                     },
                     { 
                         id: 4, 
@@ -529,7 +548,8 @@
                         thumbnail: "https://images.unsplash.com/photo-1516156008625-3a9d6067ffd5?auto=format&fit=crop&w=400&q=80",
                         description: "Quick thinking and communication solve an unexpected event during critical travel delays.",
                         apps: generateApps(),
-                        homeworkPrompt: "Write an incident report detailing a travel emergency scenario and the communicative steps taken to secure an alternate pathway."
+                        homeworkPrompt: "Write an incident report detailing a travel emergency scenario and the communicative steps taken to secure an alternate pathway.",
+                        transcript: "CRITICAL RESOLUTION\n\n[Train Station Announcements Background]\n\nTraveler: Excuse me, the board says the 4:15 express train to Berlin is cancelled. Is that correct?\n\nAgent: Yes, I am afraid there is an electrical issue on the northern tracks. All express trains on that route are delayed indefinitely.\n\nTraveler: Oh no, I have a vital presentation to deliver this evening. Is there an alternative route?\n\nAgent: You can take the regional commuter line to the southern junction, then transfer directly to the high-speed shuttle. It will take forty minutes longer, but you will arrive by 7:30.\n\nTraveler: Perfect. Thank you for your quick thinking and assistance!"
                     }
                 ]
             }
@@ -672,6 +692,23 @@
             tooltip.classList.add('hidden');
         };
 
+        // Transcript window collapsible control
+        window.toggleTranscript = () => {
+            const transcriptWindow = document.getElementById('transcript-window');
+            const transcriptToggleText = document.getElementById('transcript-toggle-text');
+            const transcriptToggleIcon = document.getElementById('transcript-toggle-icon');
+
+            if (transcriptWindow.classList.contains('hidden')) {
+                transcriptWindow.classList.remove('hidden');
+                transcriptToggleText.textContent = "Hide Transcript";
+                transcriptToggleIcon.textContent = "📖";
+            } else {
+                transcriptWindow.classList.add('hidden');
+                transcriptToggleText.textContent = "Show Transcript";
+                transcriptToggleIcon.textContent = "📘";
+            }
+        };
+
         // Immersive Learning Modal Operations
         window.openLearningModal = (unitIndex, storyIndex) => {
             // Track globally
@@ -684,11 +721,21 @@
             const title = document.getElementById('modal-story-title');
             const desc = document.getElementById('modal-story-desc');
             const appsContainer = document.getElementById('modal-apps-container');
+            const transcriptText = document.getElementById('transcript-text');
+
+            // Reset collapsible transcript state to hidden
+            const transcriptWindow = document.getElementById('transcript-window');
+            const transcriptToggleText = document.getElementById('transcript-toggle-text');
+            const transcriptToggleIcon = document.getElementById('transcript-toggle-icon');
+            transcriptWindow.classList.add('hidden');
+            transcriptToggleText.textContent = "Show Transcript";
+            transcriptToggleIcon.textContent = "📘";
 
             // Set YouTube dynamic embedded URL without autoplay (autoplay=0)
             iframe.src = `https://www.youtube.com/embed/${story.youtubeId}?autoplay=0&rel=0`;
             title.textContent = story.title;
             desc.textContent = story.description;
+            transcriptText.textContent = story.transcript || "No transcript available for this episode.";
 
             // Generate simple numbered app entries inside the side column
             let appsHtml = '';
