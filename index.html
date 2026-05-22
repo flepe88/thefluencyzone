@@ -182,7 +182,7 @@
                                     <span class="text-2xl">🗣️</span>
                                     <div>
                                         <h5 class="text-sm font-bold text-gray-100 group-hover:text-fluency-neon transition">Speaking Section</h5>
-                                        <p class="text-[11px] text-gray-500">Oral drills & new app</p>
+                                        <p class="text-[11px] text-gray-500">Oral drills & expressions</p>
                                     </div>
                                 </div>
                                 <svg class="w-4 h-4 text-gray-500 group-hover:text-fluency-neon transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -250,47 +250,8 @@
             
             <div class="p-6 space-y-4 max-h-[60vh] overflow-y-auto">
                 <div class="bg-[#0d1015] border border-gray-800 rounded-xl p-5 shadow-inner">
-                    <ol class="space-y-3.5 text-sm text-gray-200">
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">1</span> 
-                            <span class="font-medium">There is … / There are …</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">2</span> 
-                            <span class="font-medium">Your turn / Say it</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">3</span> 
-                            <span class="font-medium">Fruits / Objects</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">4</span> 
-                            <span class="font-medium">What color is … ?</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">5</span> 
-                            <span class="font-medium">That / this</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">6</span> 
-                            <span class="font-medium">The ..., ..., ..., are yellow.</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">7</span> 
-                            <span class="font-medium">Choose / another</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">8</span> 
-                            <span class="font-medium">How many … ?</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">9</span> 
-                            <span class="font-medium">Ask me / her / him</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">10</span> 
-                            <span class="font-medium">Too</span>
-                        </li>
+                    <ol id="speaking-expressions-list" class="space-y-3.5 text-sm text-gray-200">
+                        <!-- Loaded Dynamically -->
                     </ol>
                 </div>
                 
@@ -507,7 +468,19 @@
                             return apps;
                         })(),
                         homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long.\n\n1. Walk down.\n\n2. Lucky.\n\n3. Through.\n\n4. Bigger than.\n\n5. Wonder.\n\n6. Greedy.",
-                        transcript: "The Dog and his Bone\n\nA dog is walking down the street, when he sees a bone in a trash can. “A bone! Yippee! How lucky for me!” he thinks. He grabs the bone, and happily runs home.\n\nHe runs past the train station and the school. He runs through the park. He runs onto a bridge. On the bridge, the dog looks down into the deep, still water below.\n\nThere, he sees another dog with a bone in its mouth. “Who is that dog?” he wonders. “What is he doing down there?” The dog stares at the other dog. The other dog stares back.\n\n“Where did that dog get such a BIG bone?” the dog wonders. “Why is his bone bigger than mine?” The dog growls at the other dog. The other dog growls too. “I want that big bone!” he thinks.\n\nThe greedy dog decides to steal the other dog's bone. He leaps off the bridge and into the water. Splash! But as soon as he hits the water, the other dog disappears. There was never any other dog. It was just his own reflection!\n\nThe water is very deep and the dog is surprised. “Woof woof woof! Help!” he barks. And when he barks, his bone drops from his mouth and sinks to the bottom of the water.\nThe dog swims to shore. He is wet and cold, and now he has no bone at all.\n\nMoral:\n\n\Be happy with what you have. If you're greedy, you might lose everything."
+                        transcript: "The Dog and his Bone\n\nA dog is walking down the street, when he sees a bone in a trash can. “A bone! Yippee! How lucky for me!” he thinks. He grabs the bone, and happily runs home.\n\nHe runs past the train station and the school. He runs through the park. He runs onto a bridge. On the bridge, the dog looks down into the deep, still water below.\n\nThere, he sees another dog with a bone in its mouth. “Who is that dog?” he wonders. “What is he doing down there?” The dog stares at the other dog. The other dog stares back.\n\n“Where did that dog get such a BIG bone?” the dog wonders. “Why is his bone bigger than mine?” The dog growls at the other dog. The other dog growls too. “I want that big bone!” he thinks.\n\nThe greedy dog decides to steal the other dog's bone. He leaps off the bridge and into the water. Splash! But as soon as he hits the water, the other dog disappears. There was never any other dog. It was just his own reflection!\n\nThe water is very deep and the dog is surprised. “Woof woof woof! Help!” he barks. And when he barks, his bone drops from his mouth and sinks to the bottom of the water.\nThe dog swims to shore. He is wet and cold, and now he has no bone at all.\n\nMoral:\n\n\Be happy with what you have. If you're greedy, you might lose everything.",
+                        speakingExpressions: [
+                            "There is … / There are …",
+                            "Your turn / Say it",
+                            "Fruits / Objects",
+                            "What color is … ?",
+                            "That / this",
+                            "The ..., ..., ..., are yellow.",
+                            "Choose / another",
+                            "How many … ?",
+                            "Ask me / her / him",
+                            "Too"
+                        ]
                     },
                     { 
                         id: 2, 
@@ -551,7 +524,18 @@
                             return apps;
                         })(),
                         homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long.\n\n1. Have been.\n\n2. Do you think that..?\n\n3. Useless.\n\n4. Luckily.\n\n5. Branches.\n\n6. Comfortable.",
-                        transcript: "The Oak Tree:\n\nOne hot day, two hikers are walking in the dry, brown hills. They have been walking all day, and they are tired and hungry. They see a tree in the distance. “I am sooooo hungry!” says one hiker. “Do you think that’s an apple tree? I want a big, crunchy, red apple!”\n\n“Nah, that’s not an apple tree,” says the other. “It's a pear tree! Pears are my favorite. I want a sweet, juicy, yellow pear!” But when they arrive at the tree, there are no apples. Or pears either! In fact, there is no fruit at all. “Aw, boo!” says one hiker. “It’s a useless oak tree!”\n\nJust then, the sky turns grey and it starts to rain. The two hikers run under the oak tree to stay dry. It rains and rains, but the oak tree is like a big umbrella. The hikers don't get wet. They wait under the oak tree for the rain to stop. Day turns into night. “I’m cold,” says one hiker. “We should make a fire. Help me collect some wood!”\n\nLuckily, there are many old branches under the oak tree. The two hikers collect the branches and make a nice campfire out of them. They sit beside the fire to warm themselves. “I’m tired,” says one hiker. “We should sleep here tonight. Help me make a bed!”\nThe hikers make a bed out of soft, green oak leaves. They snuggle into the leaves and fall asleep. The rain falls and the wind blows, but the hikers are comfortable, warm and dry under the “useless” oak tree.\n\nMoral:\n\nSometimes the best gifts aren’t what we originally hoped for."
+                        transcript: "The Oak Tree:\n\nOne hot day, two hikers are walking in the dry, brown hills. They have been walking all day, and they are tired and hungry. They see a tree in the distance. “I am sooooo hungry!” says one hiker. “Do you think that’s an apple tree? I want a big, crunchy, red apple!”\n\n“Nah, that’s not an apple tree,” says the other. “It's a pear tree! Pears are my favorite. I want a sweet, juicy, yellow pear!” But when they arrive at the tree, there are no apples. Or pears either! In fact, there is no fruit at all. “Aw, boo!” says one hiker. “It’s a useless oak tree!”\n\nJust then, the sky turns grey and it starts to rain. The two hikers run under the oak tree to stay dry. It rains and rains, but the oak tree is like a big umbrella. The hikers don't get wet. They wait under the oak tree for the rain to stop. Day turns into night. “I’m cold,” says one hiker. “We should make a fire. Help me collect some wood!”\n\nLuckily, there are many old branches under the oak tree. The two hikers collect the branches and make a nice campfire out of them. They sit beside the fire to warm themselves. “I’m tired,” says one hiker. “We should sleep here tonight. Help me make a bed!”\nThe hikers make a bed out of soft, green oak leaves. They snuggle into the leaves and fall asleep. The rain falls and the wind blows, but the hikers are comfortable, warm and dry under the “useless” oak tree.\n\nMoral:\n\nSometimes the best gifts aren’t what we originally hoped for.",
+                        speakingExpressions: [
+                            "How do you feel today?",
+                            "When I feel sleepy …",
+                            "What do you do?",
+                            "What color is … ?",
+                            "Is the desert a cold place?",
+                            "Yes, it is / No, it isn’t",
+                            "When do you use an umbrella?",
+                            "How many … ?",
+                            "Ask me / her / him"
+                        ]
                     },
                     { 
                         id: 3, 
@@ -562,7 +546,18 @@
                         description: "Lost in the downtown districts. Learn to process map coordinates, street instructions, and local shortcuts.",
                         apps: generateApps(),
                         homeworkPrompt: "Draft an instructional guide outlining step-by-step directions from your home to your favorite local café. Integrate complex directional adverbs (e.g., adjacent to, bypass, opposite).",
-                        transcript: "NAVIGATION QUEST\n\n[City Downtown Noises]\n\nLost Tourist: Excuse me, sir. Could you point me in the direction of the Central Art Museum?\n\nLocal Resident: Ah, yes. It can be a bit tricky from here. Walk straight down this avenue until you reach the old stone library.\n\nLost Tourist: Is that near the central cathedral?\n\nLocal Resident: Correct. Once you bypass the cathedral square, make a sharp left turn. The museum will be directly adjacent to the botanical greenhouse, right opposite the train station.\n\nLost Tourist: Thank you so much! I was completely turned around on my map."
+                        transcript: "NAVIGATION QUEST\n\n[City Downtown Noises]\n\nLost Tourist: Excuse me, sir. Could you point me in the direction of the Central Art Museum?\n\nLocal Resident: Ah, yes. It can be a bit tricky from here. Walk straight down this avenue until you reach the old stone library.\n\nLost Tourist: Is that near the central cathedral?\n\nLocal Resident: Correct. Once you bypass the cathedral square, make a sharp left turn. The museum will be directly adjacent to the botanical greenhouse, right opposite the train station.\n\nLost Tourist: Thank you so much! I was completely turned around on my map.",
+                        speakingExpressions: [
+                            "Directional coordinates",
+                            "Excuse me, could you point me to...?",
+                            "Walk straight down...",
+                            "Is that near...?",
+                            "Once you bypass...",
+                            "Sharp left/right turn",
+                            "Directly adjacent to...",
+                            "Opposite the station",
+                            "I am completely turned around"
+                        ]
                     },
                     { 
                         id: 4, 
@@ -573,7 +568,18 @@
                         description: "Hone conversational bartering skills, currency exchanges, and transactions in a lively central market.",
                         apps: generateApps(),
                         homeworkPrompt: "Write a persuasive commercial pitch for an item of your choice, incorporating bartering tactics and price reduction strategies discussed in Story 4.",
-                        transcript: "THE TRADE EXCHANGE\n\n[Lively Outdoor Market Noise]\n\nBuyer: Hello. This brass lantern is absolutely beautiful. How much are you asking for it?\n\nSeller: Ah, you have excellent taste! That is a genuine antique. I can let it go for eighty dollars.\n\nBuyer: Eighty dollars? That is a bit steep for my budget. Would you consider fifty?\n\nSeller: Fifty is too low, my friend. I paid more than that to acquire it. However, since you appreciate quality, I can do seventy.\n\nBuyer: Let's meet in the middle. Sixty-five, and I will pay in cash right now.\n\nSeller: Sixty-five... active deal! You've got yourself a beautiful treasure."
+                        transcript: "THE TRADE EXCHANGE\n\n[Lively Outdoor Market Noise]\n\nBuyer: Hello. This brass lantern is absolutely beautiful. How much are you asking for it?\n\nSeller: Ah, you have excellent taste! That is a genuine antique. I can let it go for eighty dollars.\n\nBuyer: Eighty dollars? That is a bit steep for my budget. Would you consider fifty?\n\nSeller: Fifty is too low, my friend. I paid more than that to acquire it. However, since you appreciate quality, I can do seventy.\n\nBuyer: Let's meet in the middle. Sixty-five, and I will pay in cash right now.\n\nSeller: Sixty-five... active deal! You've got yourself a beautiful treasure.",
+                        speakingExpressions: [
+                            "How much are you asking for...?",
+                            "That is a genuine antique",
+                            "Let it go for...",
+                            "A bit steep for my budget",
+                            "Would you consider...?",
+                            "Too low, my friend",
+                            "Let's meet in the middle",
+                            "Pay in cash",
+                            "Active deal!"
+                        ]
                     }
                 ]
             },
@@ -591,7 +597,16 @@
                         description: "A conversation while dining with locals. Master social ordering etiquettes and casual pleasantries.",
                         apps: generateApps(),
                         homeworkPrompt: "Compose a restaurant review detailing a culinary experience, highlighting conversational exchanges with the hosting staff and the presentation of dishes.",
-                        transcript: "THE BISTRO DIALOGUE\n\n[Clinking Glasses and Light Jazz Piano]\n\nServer: Good evening. Welcome to Le Petit Bistro. Are you ready to order, or do you need a few more minutes?\n\nGuest A: Good evening. We are ready. I would like to try the chef's special grilled salmon with seasonal vegetables.\n\nGuest B: And for me, the classic herb roasted chicken, please. Also, what do you recommend for dessert?\n\nServer: Our homemade lemon tart is spectacular tonight.\n\nGuest A: Perfect, we will order two of those later. Thank you!"
+                        transcript: "THE BISTRO DIALOGUE\n\n[Clinking Glasses and Light Jazz Piano]\n\nServer: Good evening. Welcome to Le Petit Bistro. Are you ready to order, or do you need a few more minutes?\n\nGuest A: Good evening. We are ready. I would like to try the chef's special grilled salmon with seasonal vegetables.\n\nGuest B: And for me, the classic herb roasted chicken, please. Also, what do you recommend for dessert?\n\nServer: Our homemade lemon tart is spectacular tonight.\n\nGuest A: Perfect, we will order two of those later. Thank you!",
+                        speakingExpressions: [
+                            "Are you ready to order?",
+                            "I would like to try...",
+                            "And for me, please",
+                            "What do you recommend for...?",
+                            "Spectacular tonight",
+                            "We will order two of those",
+                            "Later, thank you!"
+                        ]
                     },
                     { 
                         id: 2, 
@@ -602,7 +617,16 @@
                         description: "Align schedules and express future projections during a brainstorming meeting with peers.",
                         apps: generateApps(),
                         homeworkPrompt: "Develop a written blueprint for a week-long business project launch, clearly listing agenda goals, deadlines, and team dependencies using futuristic terminology.",
-                        transcript: "AGENDA DRAFTING\n\n[Office Conference Room Setting]\n\nProject Lead: Welcome everyone. Let's outline our rollout agenda for next month's launch.\n\nDeveloper: The software codebase is currently stable. We need to complete security testing by Friday afternoon.\n\nDesigner: The interactive interface prototypes are finished. I will sync with marketing to align on assets.\n\nProject Lead: Excellent. Let's schedule the final deployment review for next Tuesday. We want to ensure everything runs perfectly before public deployment."
+                        transcript: "AGENDA DRAFTING\n\n[Office Conference Room Setting]\n\nProject Lead: Welcome everyone. Let's outline our rollout agenda for next month's launch.\n\nDeveloper: The software codebase is currently stable. We need to complete security testing by Friday afternoon.\n\nDesigner: The interactive interface prototypes are finished. I will sync with marketing to align on assets.\n\nProject Lead: Excellent. Let's schedule the final deployment review for next Tuesday. We want to ensure everything runs perfectly before public deployment.",
+                        speakingExpressions: [
+                            "Let's outline our rollout...",
+                            "Currently stable",
+                            "Complete testing by...",
+                            "Prototypes are finished",
+                            "Sync with marketing to align...",
+                            "Schedule the final review",
+                            "Ensure everything runs perfectly"
+                        ]
                     },
                     { 
                         id: 3, 
@@ -613,7 +637,17 @@
                         description: "Explore relationship terms, shared histories, and domestic expressions around a large family table.",
                         apps: generateApps(),
                         homeworkPrompt: "Describe a memorable celebration or holiday event in your family. Include descriptions of family relations, traditional expressions, and dining settings.",
-                        transcript: "FAMILY GATHERINGS\n\n[Warm Family Dinner Ambient Sound]\n\nGrandmother: Pass the potatoes down, please. It is so wonderful to have everyone seated together under one roof.\n\nUncle: It truly is. It's been nearly two years since we all gathered like this.\n\nCousin: I was just telling Aunt Clara how much I missed her traditional apple pie recipe.\n\nGrandmother: Well, you are in luck! Clara baked two of them this morning. Let's enjoy our main course first!"
+                        transcript: "FAMILY GATHERINGS\n\n[Warm Family Dinner Ambient Sound]\n\nGrandmother: Pass the potatoes down, please. It is so wonderful to have everyone seated together under one roof.\n\nUncle: It truly is. It's been nearly two years since we all gathered like this.\n\nCousin: I was just telling Aunt Clara how much I missed her traditional apple pie recipe.\n\nGrandmother: Well, you are in luck! Clara baked two of them this morning. Let's enjoy our main course first!",
+                        speakingExpressions: [
+                            "Pass the... down, please",
+                            "Seated together under one roof",
+                            "It truly is",
+                            "It's been nearly... since we gathered",
+                            "I was just telling...",
+                            "How much I missed her...",
+                            "You are in luck!",
+                            "Let's enjoy our main course first"
+                        ]
                     },
                     { 
                         id: 4, 
@@ -624,7 +658,17 @@
                         description: "Quick thinking and communication solve an unexpected event during critical travel delays.",
                         apps: generateApps(),
                         homeworkPrompt: "Write an incident report detailing a travel emergency scenario and the communicative steps taken to secure an alternate pathway.",
-                        transcript: "CRITICAL RESOLUTION\n\n[Train Station Announcements Background]\n\nTraveler: Excuse me, the board says the 4:15 express train to Berlin is cancelled. Is that correct?\n\nAgent: Yes, I am afraid there is an electrical issue on the northern tracks. All express trains on that route are delayed indefinitely.\n\nTraveler: Oh no, I have a vital presentation to deliver this evening. Is there an alternative route?\n\nAgent: You can take the regional commuter line to the southern junction, then transfer directly to the high-speed shuttle. It will take forty minutes longer, but you will arrive by 7:30.\n\nTraveler: Perfect. Thank you for your quick thinking and assistance!"
+                        transcript: "CRITICAL RESOLUTION\n\n[Train Station Announcements Background]\n\nTraveler: Excuse me, the board says the 4:15 express train to Berlin is cancelled. Is that correct?\n\nAgent: Yes, I am afraid there is an electrical issue on the northern tracks. All express trains on that route are delayed indefinitely.\n\nTraveler: Oh no, I have a vital presentation to deliver this evening. Is there an alternative route?\n\nAgent: You can take the regional commuter line to the southern junction, then transfer directly to the high-speed shuttle. It will take forty minutes longer, but you will arrive by 7:30.\n\nTraveler: Perfect. Thank you for your quick thinking and assistance!",
+                        speakingExpressions: [
+                            "Is that correct?",
+                            "I am afraid there is an issue",
+                            "Delayed indefinitely",
+                            "A vital presentation to deliver",
+                            "Is there an alternative route?",
+                            "Take the regional commuter line",
+                            "Transfer directly to...",
+                            "Thank you for your quick thinking"
+                        ]
                     }
                 ]
             }
@@ -880,8 +924,30 @@
             document.getElementById('homework-modal').classList.add('hidden');
         };
 
-        // Speaking Overlay Control
+        // Speaking Overlay Control with dynamically loaded lists
         window.openSpeakingPanel = () => {
+            const story = curriculumData[activeUnitIndex].stories[activeStoryIndex];
+            const expressions = story.speakingExpressions || [
+                "There is … / There are …",
+                "Your turn / Say it",
+                "Fruits / Objects",
+                "What color is … ?",
+                "That / this",
+                "The ..., ..., ..., are yellow.",
+                "Choose / another",
+                "How many … ?",
+                "Ask me / her / him",
+                "Too"
+            ];
+
+            const listContainer = document.getElementById('speaking-expressions-list');
+            listContainer.innerHTML = expressions.map((expr, idx) => `
+                <li class="flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-md bg-fluency-neon/10 border border-fluency-neon/35 flex items-center justify-center text-xs text-fluency-neon font-bold flex-shrink-0">${idx + 1}</span> 
+                    <span class="font-medium">${expr}</span>
+                </li>
+            `).join('');
+
             document.getElementById('speaking-modal').classList.remove('hidden');
         };
 
