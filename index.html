@@ -682,8 +682,8 @@
             const desc = document.getElementById('modal-story-desc');
             const appsContainer = document.getElementById('modal-apps-container');
 
-            // Set YouTube dynamic embedded URL
-            iframe.src = `https://www.youtube.com/embed/${story.youtubeId}?autoplay=1&rel=0`;
+            // Set YouTube dynamic embedded URL without autoplay (autoplay=0)
+            iframe.src = `https://www.youtube.com/embed/${story.youtubeId}?autoplay=0&rel=0`;
             title.textContent = story.title;
             desc.textContent = story.description;
 
