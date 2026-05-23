@@ -592,24 +592,49 @@
                     },
                     { 
                         id: 4, 
-                        title: "Story 4: The Trade Exchange", 
-                        duration: "3:48",
-                        youtubeId: "M_X8Z_qVfJc",
-                        thumbnail: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=400&q=80",
-                        description: "Hone conversational bartering skills, currency exchanges, and transactions in a lively central market.",
-                        apps: generateApps(),
-                        homeworkPrompt: "Write a persuasive commercial pitch for an item of your choice, incorporating bartering tactics and price reduction strategies discussed in Story 4.",
-                        transcript: "THE TRADE EXCHANGE\n\n[Lively Outdoor Market Noise]\n\nBuyer: Hello. This brass lantern is absolutely beautiful. How much are you asking for it?\n\nSeller: Ah, you have excellent taste! That is a genuine antique. I can let it go for eighty dollars.\n\nBuyer: Eighty dollars? That is a bit steep for my budget. Would you consider fifty?\n\nSeller: Fifty is too low, my friend. I paid more than that to acquire it. However, since you appreciate quality, I can do seventy.\n\nBuyer: Let's meet in the middle. Sixty-five, and I will pay in cash right now.\n\nSeller: Sixty-five... active deal! You've got yourself a beautiful treasure.",
+                        title: "Don't Show off | The Art of Quiet Success", 
+                        duration: "3:54",
+                        youtubeId: "lazzSIkjxGQ",
+                        thumbnail: "https://img.youtube.com/vi/lazzSIkjxGQ/hqdefault.jpg",
+                        description: "This inspirational video teaches us about the power of faith, hope, determination, the power of hope, and the importance of believing in our abilities.",
+                        apps: (() => {
+                            // Request exactly 7 apps to prevent random slicing
+                            const apps = generateApps(7);
+                            
+                            // Assign the specified link to App 1
+                            apps[0].url = "https://showofftranscript.netlify.app/";
+                            apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 2
+                            apps[1].url = "https://dontshowoffquizz.netlify.app/";
+                            apps[1].instruction = "Choose the best option according to the description of each image.";
+                            
+                            // Assign the specified link to App 3
+                            apps[2].url = "https://showofftranscript2.netlify.app/";
+                            apps[2].instruction = "Listen to part 2 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 4
+                            apps[3].url = "https://dontshowoffreplicate.netlify.app/";
+                            apps[3].instruction = "Create your own sentences using the same structures from the examples taken from the story.";
+                            
+                            // Assign the specified link to App 5
+                            apps[4].url = "https://showofftranscript3.netlify.app/";
+                            apps[4].instruction = "Listen to the last part of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 6
+                            apps[5].url = "https://dontshowoffwhatsmissing.netlify.app/";
+                            apps[5].instruction = "Play the What’s missing game and try to remember the hidden image.";
+                            
+                            // Assign the specified link to App 7
+                            apps[6].url = "https://dontshowoffwhatsmissing2.netlify.app/";
+                            apps[6].instruction = "Play the What’s missing game and try to remember the hidden image.";
+
+                            return apps;
+                        })(),
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long. \n\n1. There was\n2. Clever.\n3. Jealous of.\n4. Foolish.\n5. Why do you…?\n6. Every time.\n7. Everyone.\n8. Felt bad.\n9. Quickly.\n10. The whole.\n11. Enjoy.\n12. Often.",
+                        transcript: "Don't Show off | The Art of Quiet Success:\n\nOnce there was a very clever minister in a king's court. This Minister had a solution for every problem, and the King did not make any big decision without asking him. Because of this, other people in the court were jealous of the minister.\n\nOne day, the king told the minister: ‘You are very smart, but your son is very foolish, and has no sense’. The minister did not like this and asked: ‘Your majesty, why are you saying this? Why do you think my son is foolish?’. The king said: ‘Every morning when I go to meet the people, your son is there. I ask him everyday, what is more valuable, gold or silver. And everytime your son says silver’.\n\nHearing this, everyone in the court started laughing, and the minister felt bad. Without saying anything, he went straight home and asked his son, ‘Which metal is more valuable, gold or silver?’. The son quickly replied ‘Father, gold’.\n\nThe minister then asked, ‘If you know that gold is valuable, why do you give the king the wrong answer every day, and say silver is more valuable?’. The son replied, ‘Father, every morning the king comes to the market to meet the people. Every day he calls me, places two coins in front of me, one silver, and one gold and asks me, ‘Take the more valuable one’, I pick the silver coin, and the King laughs and goes away.\nThe minister then asked his son, ‘Why do you pick the silver coin every day?. Today because of this, the whole court made fun of me’.\n\nHearing this, the son took his father to his room, and opened a box. The box was full of silver coins. Seeing so many silver coins, the minister was surprised and asked, ‘How did you get so many silver coins?’. The son replied, ‘Father, these are the coins that the king gives me. The day I give the king the right answer and take the gold coin, he will stop asking me this question, and I will stop getting a silver coin every day.\n\nThe king enjoys it when I pick the silver coin and say that silver is more valuable than gold. He laughs and goes away without thinking too much. I don't want to lose my daily silver coin for one gold coin’. Hearing this, the minister felt proud of his son and understood that even though people called his son foolish, his son's wisdom was something that only a wise person could understand. Now, whenever anyone called his son foolish, the minister would smile and leave.\n\nFriends, you may have noticed that some people do a little work and make a big show of it. While others do great things without showing off. If you know that what you're doing is right, then it doesn't matter if people call you foolish or crazy. The world often calls those it doesn't understand crazy.\n\nSo if you want to share this story with more people, please like this video. I'll see you next time with another story like this, so be patient, be grateful, and keep moving forward in life.",
                         speakingExpressions: [
-                            "How much are you asking for...?",
-                            "That is a genuine antique",
-                            "Let it go for...",
-                            "A bit steep for my budget",
-                            "Would you consider...?",
-                            "Too low, my friend",
-                            "Let's meet in the middle",
-                            "Pay in cash",
-                            "Active deal!"
+                            "The student should always answer / speak in complete sentences.",
                         ]
                     }
                 ]
@@ -1013,7 +1038,10 @@
                 launchApp("Speaking Section Practice Engine", "https://speaking-2.netlify.app/");
             } else if (activeUnitIndex === 0 && activeStoryIndex === 2) {
                 // Check if we are in Unit 1 (index 0), Story 3 (index 2 - "The Fox and the Crow")
-                launchApp("Speaking Section Practice Engine", "https://speaking3.netlify.app/");
+                launchApp("Speaking Section Practice Engine", "https://speaking3.netlify.app/");              
+            } else if (activeUnitIndex === 0 && activeStoryIndex === 3) {
+                // Check if we are in Unit 1 (index 0), Story 4 (index 3 - "Don't Show off | The Art of Quiet Success")
+                launchApp("Speaking Section Practice Engine", "https://speaking4.netlify.app/");
             } else {
                 alertExercise("Speaking Section Practice Engine");
             }
