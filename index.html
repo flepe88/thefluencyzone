@@ -540,23 +540,54 @@
                     { 
                         id: 3, 
                         title: "The Fox and the Crow", 
-                        duration: "6:03",
-                        youtubeId: "XQxP9F3b_Q8",
-                        thumbnail: "https://images.unsplash.com/photo-1527269537047-40fbe5034115?auto=format&fit=crop&w=400&q=80",
-                        description: "Lost in the downtown districts. Learn to process map coordinates, street instructions, and local shortcuts.",
-                        apps: generateApps(),
-                        homeworkPrompt: "Draft an instructional guide outlining step-by-step directions from your home to your favorite local café. Integrate complex directional adverbs (e.g., adjacent to, bypass, opposite).",
-                        transcript: "NAVIGATION QUEST\n\n[City Downtown Noises]\n\nLost Tourist: Excuse me, sir. Could you point me in the direction of the Central Art Museum?\n\nLocal Resident: Ah, yes. It can be a bit tricky from here. Walk straight down this avenue until you reach the old stone library.\n\nLost Tourist: Is that near the central cathedral?\n\nLocal Resident: Correct. Once you bypass the cathedral square, make a sharp left turn. The museum will be directly adjacent to the botanical greenhouse, right opposite the train station.\n\nLost Tourist: Thank you so much! I was completely turned around on my map.",
+                        duration: "3:18",
+                        youtubeId: "BF3bXji-J7I",
+                        thumbnail: "https://img.youtube.com/vi/BF3bXji-J7I/hqdefault.jpg",
+                        description: "A hungry fox sees a crow holding some cheese in its beak. But how will he get the cheese? This short story is in the present tense.",
+                        apps: (() => {
+                            // Request exactly 6 apps to prevent random slicing
+                            const apps = generateApps(6);
+                            
+                            // Assign the specified link to App 1
+                            apps[0].url = "https://thefoxtranscript.netlify.app/";
+                            apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 2
+                            apps[1].url = "https://thefoxtyping.netlify.app/";
+                            apps[1].instruction = "Type the missing words of the first part of the story in the following exercise.";
+                            
+                            // Assign the specified link to App 3
+                            apps[2].url = "https://thefoxtranscript2.netlify.app/";
+                            apps[2].instruction = "Listen to part 2 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 4
+                            apps[3].url = "https://thefoxaudioimages.netlify.app/";
+                            apps[3].instruction = "Drag and drop the images to match the order of events in the story.";
+                            
+                            // Assign the specified link to App 5
+                            apps[4].url = "https://thefoxtranscript3.netlify.app/";
+                            apps[4].instruction = "Listen to the last part of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 6
+                            apps[5].url = "https://thefoxtranscriptimages.netlify.app/";
+                            apps[5].instruction = "Pay attention to the underlined words, analyze how they work in context and try to use them in your own examples. Make 1 Example for each underlined word. Example: Looking for: “I’m looking for new words to improve my English”.";
+
+                            return apps;
+                        })(),
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long. \n\n1. Early\n\n2. Something.\n\n3. I’ve found.\n\n4. Did you … ?\n\n5. Branch.\n\n6. Tightly.\n\n7. Feathers.\n\n8. Everyone.\n\n9. Swallow.",
+                        transcript: "The Fox and the Crow:\n\nEarly one morning, a fox is walking through the woods. He is hungry, and he is looking for something to eat. He sees a crow sitting on the highest branch of a tree. The crow has a piece of cheese in her beak. ‘Hmmm I love cheese’ thinks the fox. I think I’ve found my breakfast.\n\nBut how can I get the cheese? He thinks and thinks, then, he has a clever idea. ‘I will make her talk’. He sits at the bottom of the tree, and looks up at the crow. ‘Good morning Miss Crow!’ he says. It's a lovely day, isn't it? The crow looks down at the fox. She says nothing.\n\n‘I said ¡Good morning!’ says the fox. ‘Did you hear me? maybe you can't hear me up there’. The crow is suspicious. She holds the cheese tightly in her beak and says nothing. ‘Hmm This is not so easy’ thinks the fox, but he doesn't give up.\n\nHe smiles at the crow. ‘You know you really are the most beautiful bird’ he says. Your feathers are so shiny, your eyes are so intelligent, your beak is so hmm pointy. Everything about you is perfect. Still the crow says nothing.\nSo the fox says ‘Tell Me Miss Crow, is your voice also magnificent?\n\nI hear that you have the most wonderful voice, please sing for me  just one song’. Then I can tell everyone you really are the most incredible bird. The queen of all birds in fact.\n\nThis makes the crow feel good. She wants everyone to know she has a wonderful voice. She wants everyone to know that she is the queen of all birds. She smiles a little smile, then she smiles a big smile. Then, she opens her mouth to sing her best song for the fox. And ‘plop’ the cheese drops out of her beak, and falls straight into the mouth of the fox.\nHe swallows it in one gulp! ‘Hmmm, thank you for the delicious breakfast Miss Crow!’ Laughs the fox as he walks away. ‘Have a lovely day!’.\n\nMoral:\n\nBeware of flatterers. They often want something from you.",
                         speakingExpressions: [
-                            "Directional coordinates",
-                            "Excuse me, could you point me to...?",
-                            "Walk straight down...",
-                            "Is that near...?",
-                            "Once you bypass...",
-                            "Sharp left/right turn",
-                            "Directly adjacent to...",
-                            "Opposite the station",
-                            "I am completely turned around"
+                            "Look for someone / something that …",
+                            "I found it / him / her.",
+                            "What do you do when (you are happy)?",
+                            "I use a … when I need / want …",
+                            "Your turn",
+                            "What is (the dog) doing?",
+                            "When do you use a (microphone)?",
+                            "Is the number … odd or even?",
+                            "How many odd / even numbers are there?",
+                            "How much is … plus / minus …",
+                            "Equals."
                         ]
                     },
                     { 
