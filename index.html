@@ -631,7 +631,7 @@
 
                             return apps;
                         })(),
-                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long. \n\n1. There was\n2. Clever.\n3. Jealous of.\n4. Foolish.\n5. Why do you…?\n6. Every time.\n7. Everyone.\n8. Felt bad.\n9. Quickly.\n10. The whole.\n11. Enjoy.\n12. Often.",
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 7 words long. \n\n1. There was.\n2. Clever.\n3. Jealous of.\n4. Foolish.\n5. Why do you…?\n6. Every time.\n7. Everyone.\n8. Felt bad.\n9. Quickly.\n10. The whole.\n11. Enjoy.\n12. Often.",
                         transcript: "Don't Show off | The Art of Quiet Success:\n\nOnce there was a very clever minister in a king's court. This Minister had a solution for every problem, and the King did not make any big decision without asking him. Because of this, other people in the court were jealous of the minister.\n\nOne day, the king told the minister: ‘You are very smart, but your son is very foolish, and has no sense’. The minister did not like this and asked: ‘Your majesty, why are you saying this? Why do you think my son is foolish?’. The king said: ‘Every morning when I go to meet the people, your son is there. I ask him everyday, what is more valuable, gold or silver. And everytime your son says silver’.\n\nHearing this, everyone in the court started laughing, and the minister felt bad. Without saying anything, he went straight home and asked his son, ‘Which metal is more valuable, gold or silver?’. The son quickly replied ‘Father, gold’.\n\nThe minister then asked, ‘If you know that gold is valuable, why do you give the king the wrong answer every day, and say silver is more valuable?’. The son replied, ‘Father, every morning the king comes to the market to meet the people. Every day he calls me, places two coins in front of me, one silver, and one gold and asks me, ‘Take the more valuable one’, I pick the silver coin, and the King laughs and goes away.\nThe minister then asked his son, ‘Why do you pick the silver coin every day?. Today because of this, the whole court made fun of me’.\n\nHearing this, the son took his father to his room, and opened a box. The box was full of silver coins. Seeing so many silver coins, the minister was surprised and asked, ‘How did you get so many silver coins?’. The son replied, ‘Father, these are the coins that the king gives me. The day I give the king the right answer and take the gold coin, he will stop asking me this question, and I will stop getting a silver coin every day.\n\nThe king enjoys it when I pick the silver coin and say that silver is more valuable than gold. He laughs and goes away without thinking too much. I don't want to lose my daily silver coin for one gold coin’. Hearing this, the minister felt proud of his son and understood that even though people called his son foolish, his son's wisdom was something that only a wise person could understand. Now, whenever anyone called his son foolish, the minister would smile and leave.\n\nFriends, you may have noticed that some people do a little work and make a big show of it. While others do great things without showing off. If you know that what you're doing is right, then it doesn't matter if people call you foolish or crazy. The world often calls those it doesn't understand crazy.\n\nSo if you want to share this story with more people, please like this video. I'll see you next time with another story like this, so be patient, be grateful, and keep moving forward in life.",
                         speakingExpressions: [
                             "The student should always answer / speak in complete sentences.",
@@ -651,17 +651,44 @@
                         youtubeId: "Dfz0erhfT6w",
                         thumbnail: "https://img.youtube.com/vi/Dfz0erhfT6w/hqdefault.jpg",
                         description: "In a quiet village by the river, a man is haunted by a moment from his past. But when a simple question from a child changes everything, he learns a powerful lesson about healing, forgiveness, and the importance of letting go.",
-                        apps: generateApps(),
-                        homeworkPrompt: "Compose a restaurant review detailing a culinary experience, highlighting conversational exchanges with the hosting staff and the presentation of dishes.",
-                        transcript: "THE BISTRO DIALOGUE\n\n[Clinking Glasses and Light Jazz Piano]\n\nServer: Good evening. Welcome to Le Petit Bistro. Are you ready to order, or do you need a few more minutes?\n\nGuest A: Good evening. We are ready. I would like to try the chef's special grilled salmon with seasonal vegetables.\n\nGuest B: And for me, the classic herb roasted chicken, please. Also, what do you recommend for dessert?\n\nServer: Our homemade lemon tart is spectacular tonight.\n\nGuest A: Perfect, we will order two of those later. Thank you!",
+                        apps: (() => {
+                            // Request exactly 7 apps to prevent random slicing
+                            const apps = generateApps(7);
+                            
+                            // Assign the specified link to App 1
+                            apps[0].url = "https://lettinggoofthepast.netlify.app/";
+                            apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 2
+                            apps[1].url = "https://expressions1.netlify.app/";
+                            apps[1].instruction = "Open this app and click on the expressions to master them.";
+                            
+                            // Assign the specified link to App 3
+                            apps[2].url = "https://lettinggoofthepast2.netlify.app/";
+                            apps[2].instruction = "Listen to part 2 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 4
+                            apps[3].url = "https://adjectivesmatch.netlify.app/";
+                            apps[3].instruction = "Match the words with the images and make sentences using comparatives and superlatives.";
+                            
+                            // Assign the specified link to App 5
+                            apps[4].url = "https://lettinggolistening.netlify.app/";
+                            apps[4].instruction = "Answer the following questions orally. Click the speaker icon to listen again if you need it.";
+                            
+                            // Assign the specified link to App 6
+                            apps[5].url = "https://lettinggoofthepast3.netlify.app/";
+                            apps[5].instruction = "Listen to the last part of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 7
+                            apps[6].url = "https://lettinggowordle.netlify.app/";
+                            apps[6].instruction = "Remember important words from the story by playing this wordle game.";
+
+                            return apps;
+                        })(),                        
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 8 words long. \n\n1. Peaceful.\n2. Known.\n3. Guide.\n4. Carry.\n5. Every time.\n6. Could have.\n7. Notice.\n8. Forward.\n9. Drown.\n10. Unwrap.\n11. Mistake.\n12. Burden.",
+                        transcript: "Letting Go of the Past:\n\nIn a small peaceful village by the river, there lived a man named Sammy. Sammy was known for his skill as a boatman. Everyday he ferried villagers across the river, guiding them safely through calm waters and storms alike. But Sammy carried something heavy, not in his hands or on his boat, but in his heart.\n\nYears ago, Sammy had lost his younger brother in a tragic accident on the river. Since that day, Sammy blamed himself. Every time he closed his eyes, he saw the past. What went wrong? What he could have done differently? His days became filled with regret. He started moving slower, his smile faded, and the villagers noticed he was no longer the man who used to laugh by the fire at night.\n\nOne morning, a little girl named Amina came to Sammy’s boat. She had big, curious eyes and asked, ‘Uncle Sammy, why do you look so sad all the time?’ Sammy sighed. I carry a heavy weight, child. A weight from yesterday.\nAmina tilted her head and said softly,‘But uncle, if you carry yesterday, how will you see today?’ Her words struck Sammy deeply.\n\nThat evening, Sammy sat by the riverbank, watching the water flow endlessly toward the sea. The river didn't hold on to anything. It never looked back. It just moved forward. Sammy realized something powerful. His past was like the river, and he was trying to carry its stones in his boat. But the stones only weighed him down.\n\nFrom that day, Sammy made a choice. He would remember yesterday but not carry it. He would honor his brother's memory by living fully, not by drowning in guilt.\nThe next morning, Sammy took a deep breath, stepped into his boat, and smiled at the rising sun. For the first time in years, he felt light. And as the boat gently rocked on the river, Sammy knew the past was behind him, the future was ahead, and today, today was a gift waiting to be unwrapped.\n\nReflection:\n\nIf we look at our own lives, it's easy to get stuck carrying the weight of yesterday, the mistakes, the losses, the regrets. But the truth is yesterday is a lesson, not a life sentence.\nThe river teaches us to let go, to flow forward, and to embrace each new day without the burden of what has already passed. Let go of what drags you down.\n\nHonor your past, but don't carry it. Because life is too precious and today is too beautiful to be held hostage by yesterday.",
                         speakingExpressions: [
-                            "Are you ready to order?",
-                            "I would like to try...",
-                            "And for me, please",
-                            "What do you recommend for...?",
-                            "Spectacular tonight",
-                            "We will order two of those",
-                            "Later, thank you!"
+                            "Generate a ‘Wh Question’ for any of the statements hidden in the boxes:",
                         ]
                     },
                     { 
@@ -1041,7 +1068,10 @@
                 launchApp("Speaking Section Practice Engine", "https://speaking3.netlify.app/");              
             } else if (activeUnitIndex === 0 && activeStoryIndex === 3) {
                 // Check if we are in Unit 1 (index 0), Story 4 (index 3 - "Don't Show off | The Art of Quiet Success")
-                launchApp("Speaking Section Practice Engine", "https://speaking4.netlify.app/");
+                launchApp("Speaking Section Practice Engine", "https://speaking4.netlify.app/");          
+            } else if (activeUnitIndex === 0 && activeStoryIndex === 3) {
+                // Check if we are in Unit 2 (index 0), Story 1 (index 0 - "Letting Go of the Past")
+                launchApp("Speaking Section Practice Engine", "https://speaking-2-1.netlify.app/");
             } else {
                 alertExercise("Speaking Section Practice Engine");
             }
