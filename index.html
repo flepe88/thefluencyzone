@@ -685,7 +685,7 @@
 
                             return apps;
                         })(),                        
-                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 8 words long. \n\n1. Peaceful.\n2. Known.\n3. Guide.\n4. Carry.\n5. Every time.\n6. Could have.\n7. Notice.\n8. Forward.\n9. Drown.\n10. Unwrap.\n11. Mistake.\n12. Burden.",
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 8 words long.\n\n1. Peaceful.\n2. Known.\n3. Guide.\n4. Carry.\n5. Every time.\n6. Could have.\n7. Notice.\n8. Forward.\n9. Drown.\n10. Unwrap.\n11. Mistake.\n12. Burden.",
                         transcript: "Letting Go of the Past:\n\nIn a small peaceful village by the river, there lived a man named Sammy. Sammy was known for his skill as a boatman. Everyday he ferried villagers across the river, guiding them safely through calm waters and storms alike. But Sammy carried something heavy, not in his hands or on his boat, but in his heart.\n\nYears ago, Sammy had lost his younger brother in a tragic accident on the river. Since that day, Sammy blamed himself. Every time he closed his eyes, he saw the past. What went wrong? What he could have done differently? His days became filled with regret. He started moving slower, his smile faded, and the villagers noticed he was no longer the man who used to laugh by the fire at night.\n\nOne morning, a little girl named Amina came to Sammy’s boat. She had big, curious eyes and asked, ‘Uncle Sammy, why do you look so sad all the time?’ Sammy sighed. I carry a heavy weight, child. A weight from yesterday.\nAmina tilted her head and said softly,‘But uncle, if you carry yesterday, how will you see today?’ Her words struck Sammy deeply.\n\nThat evening, Sammy sat by the riverbank, watching the water flow endlessly toward the sea. The river didn't hold on to anything. It never looked back. It just moved forward. Sammy realized something powerful. His past was like the river, and he was trying to carry its stones in his boat. But the stones only weighed him down.\n\nFrom that day, Sammy made a choice. He would remember yesterday but not carry it. He would honor his brother's memory by living fully, not by drowning in guilt.\nThe next morning, Sammy took a deep breath, stepped into his boat, and smiled at the rising sun. For the first time in years, he felt light. And as the boat gently rocked on the river, Sammy knew the past was behind him, the future was ahead, and today, today was a gift waiting to be unwrapped.\n\nReflection:\n\nIf we look at our own lives, it's easy to get stuck carrying the weight of yesterday, the mistakes, the losses, the regrets. But the truth is yesterday is a lesson, not a life sentence.\nThe river teaches us to let go, to flow forward, and to embrace each new day without the burden of what has already passed. Let go of what drags you down.\n\nHonor your past, but don't carry it. Because life is too precious and today is too beautiful to be held hostage by yesterday.",
                         speakingExpressions: [
                             "Generate a ‘Wh Question’ for any of the statements hidden in the boxes:",
@@ -693,14 +693,47 @@
                     },
                     { 
                         id: 2, 
-                        title: "Story 2: Agenda Drafting", 
-                        duration: "4:50",
-                        youtubeId: "v8L86T7Z2_4",
-                        thumbnail: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80",
-                        description: "Align schedules and express future projections during a brainstorming meeting with peers.",
-                        apps: generateApps(),
-                        homeworkPrompt: "Develop a written blueprint for a week-long business project launch, clearly listing agenda goals, deadlines, and team dependencies using futuristic terminology.",
-                        transcript: "AGENDA DRAFTING\n\n[Office Conference Room Setting]\n\nProject Lead: Welcome everyone. Let's outline our rollout agenda for next month's launch.\n\nDeveloper: The software codebase is currently stable. We need to complete security testing by Friday afternoon.\n\nDesigner: The interactive interface prototypes are finished. I will sync with marketing to align on assets.\n\nProject Lead: Excellent. Let's schedule the final deployment review for next Tuesday. We want to ensure everything runs perfectly before public deployment.",
+                        title: "Living with the Dark Winters in Sweden: Part 1", 
+                        duration: "14:24",
+                        youtubeId: "3zTR4ayDG38",
+                        thumbnail: "https://img.youtube.com/vi/3zTR4ayDG38/hqdefault.jpg",
+                        description: "Dark winters with no sunlight for many weeks, and bright summers with sunlight 24 hours a day. In this video I want to take you on a journey to the darkest and brightest times of the year, and share the beauty and the challenges that comes with them.",
+                        apps: (() => {
+                            // Request exactly 7 apps to prevent random slicing
+                            const apps = generateApps(7);
+                            
+                            // Assign the specified link to App 1
+                            apps[0].url = "https://sweden1.netlify.app/";
+                            apps[0].instruction = "Listen to part 1 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 2
+                            apps[1].url = "https://solar-anagram.netlify.app/";
+                            apps[1].instruction = "Read the clues and solve the anagrams.";
+                            
+                            // Assign the specified link to App 3
+                            apps[2].url = "https://group-sort-sweden.netlify.app/";
+                            apps[2].instruction = "Move each sentence to the missing word or expression that completes it.";
+                            
+                            // Assign the specified link to App 4
+                            apps[3].url = "https://sweden2.netlify.app/";
+                            apps[3].instruction = "Listen to part 2 of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 5
+                            apps[4].url = "https://matching-definitions.netlify.app/";
+                            apps[4].instruction = "Match the images to their definitions, then use each word in a sentence.";
+                            
+                            // Assign the specified link to App 6
+                            apps[5].url = "https://sweden3.netlify.app/";
+                            apps[5].instruction = "Listen to the last part of the story and put the sentences in the correct order.";
+                            
+                            // Assign the specified link to App 7
+                            apps[6].url = "https://fitconnectors.netlify.app/";
+                            apps[6].instruction = "Complete the sentences by dragging the words into the box, then create a wh question for each sentence.";
+
+                            return apps;
+                        })(),                        
+                        homeworkPrompt: "Write one sentence for each of the expressions listed below. Each sentence should be about 8 words long.\n\n1. Depends on.\n2. Between.\n3. Almost.\n4. Foolish.\n5. A couple of.\n6. Caused by.\n7. Cloudy.\n8. Actually.\n9. Always.\n10. I usually.\n11. Instead.\n12. Kind of.",
+                        transcript: "Living with the Dark Winters in Sweden: Part 1\n\nMy name is Jonna and I live in the north of Sweden. Sweden is a country with a lot of light. And it's also a country with a lot of darkness. It all depends on what season it is. Just like many other countries in the northern hemisphere there is a strong contrast in the light conditions between summer and winter.\n\nIn the winter it's dark almost all the time. And in the summer it's light all the time. During the summer in the very north of Sweden the sun never sets between the end of May until the middle of July. So, you can see the sun 24 hours a day and that is called the midnight sun.\nAnd then, during the winter in the very north of Sweden it's the opposite; for a couple of weeks the sun never rises above the horizon, which means that there is no sunlight for about a month, and that is called the polar night.\n\nThis extreme contrast in light is caused by the rotation of the earth in relation to the position of the sun, and the further north you go, the bigger the contrast.\nI live in the middle north of Sweden and if I'm lucky and there is a clear sky, I can see the sun above the treetops for about an hour during the darkest time of the year.“It's uhm the middle of the day and this is how high the sun goes up now. It's just a little bit over the horizon or over the trees.”\n\nBut winters like this one, when it's been cloudy every day I actually didn't see a glimpse of the sun for over a month. But just a few days ago, now in the beginning of January I got to feel the sunlight on my face again. “This is the first glimpse of the sun that we see in over a month. Do you see this?”\n\nAnd that feeling when you begin to feel the sunlight again in January is always overwhelming. It's like seeing the sun for the first time in your life.\nEven if it can be hard sometimes with these kinds of light conditions; I really love it and I would never want to change it. I think the light is never as beautiful as it is during these most extreme times of the year. When it's summer I usually change my rhythm and stay up all night and then sleep in the forenoon instead.\n\nThe light is so beautiful in the middle of the night, and as a filmmaker and photographer It's like a dream to be out and capture the beauty of the bright nights of June.\nAnd then in the winter even if we don't get so much sunlight, we at least get a few hours of twilight during the day, and that light is the most beautiful kind of daylight that I know. It's like experiencing a long sunrise without a sun.\n\nAnd, when it's a clear sky and the sun is rising just a tiny bit above the treetops it spreads a soft and pink light all over the landscape, and that is beyond beautiful.\n\nAround 3 in the day it's already getting dark and it makes the evenings feel never ending. But the darkness makes us see what is never visible in the light because actually we do get sunlight. From thousands of suns far, far away.",
                         speakingExpressions: [
                             "Let's outline our rollout...",
                             "Currently stable",
