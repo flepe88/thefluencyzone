@@ -1083,12 +1083,14 @@
         };
 
         // Direct Help App 1 & 2 to custom links
-        window.launchHelpApp = (appNumber) => {
+        window.launchHelpApp = (3) => {
             closeHelpModal();
             if (appNumber === 1) {
                 launchApp("Help App 1", "https://classexpressions.netlify.app/");
             } else if (appNumber === 2) {
-                launchApp("Help App 2", "https://classexpressions2.netlify.app/");
+                launchApp("Help App 2", "https://classexpressions2.netlify.app/");              
+            } else if (appNumber === 3) {
+                launchApp("Help App 3", "https://english-essentials.netlify.app/");
             } else {
                 alertExercise(`Help App ${appNumber}`);
             }
